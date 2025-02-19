@@ -6,7 +6,7 @@ class ProductsController {
     }
 
     async create(request: Request, response: Response) {
-        return response.status(201).json({ message: "created" });
+        return response.json({ message: "created" });
     }
 }
 
