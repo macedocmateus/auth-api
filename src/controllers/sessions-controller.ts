@@ -13,7 +13,7 @@ class SessionsController {
             id: "1",
             username: "mateus",
             password: "123",
-            role: "customer",
+            role: "Costumer",
         };
 
         // Verificando se o usuário e senha estão corretos
