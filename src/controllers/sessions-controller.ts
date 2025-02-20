@@ -13,6 +13,7 @@ class SessionsController {
             id: "1",
             username: "mateus",
             password: "123",
+            role: "customer",
         };
 
         // Verificando se o usuário e senha estão corretos
@@ -20,7 +21,7 @@ class SessionsController {
             throw new AppError("Usuário e/ou senha incorreta", 401);
         }
         const { secret, expiresIn } = authConfig.jwt;
-        const token = sign({}, secret, {
+        const token = sign({ role: fakeUser.role }, secret, {
             expiresIn,
             subject: String(fakeUser.id),
         });
